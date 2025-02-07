@@ -1,0 +1,8 @@
+host_name test1.lan
+allow ^127\.0\.0\.1$
+allow ^10\.0\.0\.0$
+allow ^::1$
+host *
+port 4949
+plugins ./plugins/
+plugins_config ./plugins.conf

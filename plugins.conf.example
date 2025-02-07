@@ -1,0 +1,23 @@
+[ruckus_*]
+env.host 10.0.0.2
+env.user super
+env.password supePassword
+
+[mikrotik_*]
+env.connect_host 10.0.0.1
+env.connect_login apiUser
+env.connect_password apiPasswd
+env.connect_tls false
+env.if_bridge br0
+
+[unifi_*]
+env.connect_login apicall
+env.connect_password examplePass
+env.connect_url https://my.example.com
+env.controller_version 4.1.13
+env.site_id Default
+env.debug_mode false
+
+[unifi_snmp_if_wan1]
+env.iface eth4
+env.ifname WAN1
