@@ -16,7 +16,7 @@ import (
 
 const (
 	lineMax        = 2048
-	version        = "1.0.5-go"
+	version        = "1.0.6-go"
 	nodeConfigPath = "node.conf"
 )
 
@@ -177,6 +177,10 @@ func loadPluginConfig(plugin string) error {
 
 func generatePossibleSections(plugin string) []string {
 	var sections []string
+
+	// Load global variables from [*] section
+	sections = append(sections, "*")
+	
 	parts := strings.Split(plugin, "_")
 
 	for i := len(parts); i > 0; i-- {
